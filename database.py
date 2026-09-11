@@ -3,6 +3,9 @@ import os
 
 DB_PATH = os.path.join(os.path.dirname(__file__), 'data', 'app.db')
 
+# Create the data directory immediately at import time so get_db_connection() never fails
+os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
+
 def get_db_connection():
     """Establish and return a connection to the SQLite database."""
     conn = sqlite3.connect(DB_PATH)

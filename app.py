@@ -347,6 +347,9 @@ def record_payment_dialog(invoice):
 st.set_page_config(page_title="MSME Payment Assistant", layout="wide")
 st.markdown(f"<style>{custom_css()}</style>", unsafe_allow_html=True)
 
+# Ensure DB and tables exist on every cold start (critical for Streamlit Cloud)
+database.init_db()
+
 st.title("MSME Payment Assistant")
 
 tab1, tab2 = st.tabs(["Dashboard", "Add Invoice"])
