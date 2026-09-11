@@ -1,0 +1,11 @@
+streamlit
+pandas
+fpdf2
+pytesseract
+pymupdf
+pillow
+python-dotenv
+reportlab
+google-genai
+opencv-python
+
