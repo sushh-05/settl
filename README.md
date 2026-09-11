@@ -2,6 +2,8 @@
 
 **Payment recovery and invoice tracking for small businesses.**
 
+🔗 **Live app:** [settl-app.streamlit.app](https://settl-app.streamlit.app/)
+
 Settl helps small contractors, suppliers, and service providers organize unpaid invoices, track partial payments, calculate overdue balances, and generate professional payment reminders — without needing accounting expertise or paid software.
 
 Built as part of the FFE Tech Entrepreneurship Program 2026.
