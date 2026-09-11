@@ -12,8 +12,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Ensure Tesseract executable is found (adjust path if necessary)
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# On Linux (Streamlit Cloud), tesseract is on PATH; on Windows, use the installer path
+import platform
+if platform.system() == "Windows":
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 def preprocess_image(image_path):
     """Preprocess image for better OCR results."""
